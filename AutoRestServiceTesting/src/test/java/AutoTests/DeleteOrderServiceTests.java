@@ -36,7 +36,7 @@ public class DeleteOrderServiceTests {
         int requestedRowInSection=1;
         int requestedSeatInTheRow=50;
 
-        Response bookingTicketResponse = orderService.createBookingTicket(userId, requestedSection, requestedRowInSection, requestedSeatInTheRow);
+        Response bookingTicketResponse = orderService.deleteBooking(userId, requestedSection, requestedRowInSection, requestedSeatInTheRow);
         Assert.assertEquals("Booking was deleted for wrong section input data. Response status is incorrect.", HttpStatus.BAD_REQUEST.value(), bookingTicketResponse.getStatus());
     }
 
